@@ -46,7 +46,18 @@ Si él quiere trabajar en la web desde su casa, **necesita instalar estos progra
     `git commit -m "Descripción del cambio"`
     `git push`
 
-(Vercel detectará el cambio automáticamente y actualizará la web en 1 minuto).
+**(¡IMPORTANTE! Vercel detectará el cambio automáticamente y actualizará la web en 1 minuto. No hace falta hacer nada más).**
+
+### 4. ¿Cómo recibes TÚ sus cambios?
+Si él hace un cambio y tú quieres seguir trabajando sobre él (para no machacarlo):
+
+1.  Antes de empezar a trabajar, abre tu terminal y escribe:
+    `git pull`
+    *(Esto descarga lo nuevo que él haya subido).*
+
+2.  Ahora ya puedes hacer tus cambios y subirlos (`git add`, `git commit`, `git push`).
+
+¡Así siempre trabajáis sobre la última versión! 🔄
 
 ## 📱 Uso en Móvil (App)
 ¡Sí, funciona perfectamente en el móvil!
