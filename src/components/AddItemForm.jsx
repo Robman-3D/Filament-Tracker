@@ -23,13 +23,13 @@ export default function AddItemForm({ onAdd }) {
     return (
         <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-                <label className="block text-sm font-medium text-pink-700 mb-1">Brand</label>
+                <label className="block text-sm font-medium text-yellow-700 mb-1">Brand</label>
                 <input
                     type="text"
                     name="brand"
                     value={formData.brand}
                     onChange={handleChange}
-                    className="w-full bg-white border border-pink-200 rounded-lg px-4 py-2 text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
+                    className="w-full bg-white border border-yellow-200 rounded-lg px-4 py-2 text-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
                     placeholder="e.g. Anycubic"
                     required
                 />
@@ -37,12 +37,12 @@ export default function AddItemForm({ onAdd }) {
 
             <div className="grid grid-cols-2 gap-4">
                 <div>
-                    <label className="block text-sm font-medium text-pink-700 mb-1">Material</label>
+                    <label className="block text-sm font-medium text-yellow-700 mb-1">Material</label>
                     <select
                         name="material"
                         value={formData.material}
                         onChange={handleChange}
-                        className="w-full bg-white border border-pink-200 rounded-lg px-4 py-2 text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
+                        className="w-full bg-white border border-yellow-200 rounded-lg px-4 py-2 text-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
                     >
                         <option value="PLA">PLA</option>
                         <option value="PLA+">PLA+</option>
@@ -57,27 +57,27 @@ export default function AddItemForm({ onAdd }) {
                     </select>
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-pink-700 mb-1">Weight (g)</label>
+                    <label className="block text-sm font-medium text-yellow-700 mb-1">Weight (g)</label>
                     <input
                         type="number"
                         name="weight"
                         value={formData.weight}
                         onChange={handleChange}
-                        className="w-full bg-white border border-pink-200 rounded-lg px-4 py-2 text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
+                        className="w-full bg-white border border-yellow-200 rounded-lg px-4 py-2 text-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
                         required
                     />
                 </div>
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-pink-700 mb-1">Color</label>
+                <label className="block text-sm font-medium text-yellow-700 mb-1">Color</label>
                 <div className="flex gap-2">
                     <input
                         type="text"
                         name="color"
                         value={formData.color}
                         onChange={handleChange}
-                        className="w-full bg-white border border-pink-200 rounded-lg px-4 py-2 text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
+                        className="w-full bg-white border border-yellow-200 rounded-lg px-4 py-2 text-yellow-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
                         placeholder="e.g. Matte Black"
                         required
                     />
@@ -90,7 +90,7 @@ export default function AddItemForm({ onAdd }) {
                             onChange={handleChange}
                         />
                         <div
-                            className="h-10 w-10 rounded border border-pink-200 shadow-sm"
+                            className="h-10 w-10 rounded border border-yellow-200 shadow-sm"
                             style={{ backgroundColor: formData.colorHex }}
                         />
                     </div>
@@ -99,7 +99,7 @@ export default function AddItemForm({ onAdd }) {
 
             <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-pink-400 to-rose-500 hover:from-pink-500 hover:to-rose-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5"
+                className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5"
             >
                 Add to Inventory
             </button>
