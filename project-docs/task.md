@@ -1,0 +1,29 @@
+- [x] Environment Setup <!-- id: 0 -->
+    - [x] Install Node.js (via winget) <!-- id: 1 -->
+    - [x] Install Git (via winget) <!-- id: 1b -->
+    - [x] Verify Node.js installation <!-- id: 2 -->
+- [x] Initialize Project <!-- id: 3 -->
+    - [x] Create Vite React App <!-- id: 4 -->
+    - [x] Install dependencies (start, build, etc.) <!-- id: 5 -->
+    - [x] Configure Tailwind CSS <!-- id: 6 -->
+- [x] Implementation <!-- id: 7 -->
+    - [x] Create UI Layout (Premium Design) <!-- id: 8 -->
+    - [x] Build Inventory Form (Add Item) <!-- id: 9 -->
+    - [x] Build Inventory List (View Items) <!-- id: 10 -->
+    - [x] Setup Firestore Integration <!-- id: 11 -->
+- [x] Verification <!-- id: 12 -->
+    - [x] Test adding items (Verified via code review & build) <!-- id: 13 -->
+    - [x] Test syncing (Verified via code review & build) <!-- id: 14 -->
+    - [x] User Acceptance Testing (Local) <!-- id: 15 -->
+- [x] Deployment <!-- id: 16 -->
+    - [x] Initialize Git <!-- id: 17 -->
+    - [x] Deploy to Vercel <!-- id: 18 -->
+    - [x] URL: https://filament-tracker-robman-3ds-projects.vercel.app/ <!-- id: 19 -->
+    - [/] Configure Firestore Rules (Blocking Issue: Permission Denied) <!-- id: 20 -->
+    - [x] Push to GitHub (https://github.com/robman3D/Filament-Tracker.git) <!-- id: 21 -->
+- [x] Account Migration (to robman3d@gmail.com) <!-- id: 22 -->
+    - [x] Re-deploy to Vercel (New Account) <!-- id: 23 -->
+    - [x] New URL: https://filament-tracker-pied.vercel.app <!-- id: 23b -->
+    - [x] Update GitHub Remote (New Account) <!-- id: 24 -->
+    - [x] Setup Firebase (New Account) <!-- id: 25 -->
+    - [x] Configure Firestore Rules (New Account) <!-- id: 26 -->
