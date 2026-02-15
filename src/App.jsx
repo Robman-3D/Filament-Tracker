@@ -49,12 +49,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 flex flex-col items-center p-4">
+    <div className="min-h-screen bg-pink-100 text-pink-900 flex flex-col items-center p-4">
       <header className="w-full max-w-4xl flex justify-between items-center py-6 mb-8">
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
           Filament Tracker
         </h1>
-        <div className="text-sm text-slate-400">
+        <div className="text-sm text-pink-500">
           Shared Inventory
         </div>
       </header>
@@ -62,15 +62,15 @@ function App() {
       <main className="w-full max-w-4xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Inventory List */}
-          <section className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 shadow-xl">
-            <h2 className="text-xl font-semibold mb-4 text-purple-300">Your Filaments</h2>
+          <section className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-pink-200 shadow-xl">
+            <h2 className="text-xl font-semibold mb-4 text-pink-700">Your Filaments</h2>
             <InventoryList items={items} onDelete={handleDelete} />
-            {loading && <p className="text-center text-slate-500 mt-2">Syncing...</p>}
+            {loading && <p className="text-center text-pink-500 mt-2">Syncing...</p>}
           </section>
 
           {/* Add Item Form */}
-          <section className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 shadow-xl h-fit">
-            <h2 className="text-xl font-semibold mb-4 text-blue-300">Add New Spool</h2>
+          <section className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-pink-200 shadow-xl h-fit">
+            <h2 className="text-xl font-semibold mb-4 text-pink-700">Add New Spool</h2>
             <AddItemForm onAdd={handleAddItem} />
           </section>
         </div>
