@@ -1,0 +1,65 @@
+export default function InventoryList({ items }) {
+    if (items.length === 0) {
+        return (
+            <div className="text-center py-10 text-slate-500">
+                <p>No filaments found.</p>
+                <p className="text-sm">Add one to get started!</p>
+            </div>
+        );
+    }
+
+    return (
+        <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+            {items.map((item) => (
+                <div
+                    key={item.id}
+                    className="bg-slate-700/30 rounded-lg p-4 border border-slate-600 hover:border-slate-500 transition group"
+                >
+                    <div className="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 className="font-semibold text-lg text-white">{item.brand}</h3>
+                            <div className="flex items-center gap-2 text-sm text-slate-300">
+                                <span className="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-xs font-medium">
+                                    {item.material}
+                                </span>
+                                <div className="flex items-center gap-1">
+                                    {item.colorHex && (
+                                        <div
+                                            className="w-3 h-3 rounded-full border border-slate-500"
+                                            style={{ backgroundColor: item.colorHex }}
+                                        />
+                                    )}
+                                    <span>{item.color}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-right">
+                            <span className="text-lg font-bold text-white">{item.weight}g</span>
+                            <p className="text-xs text-slate-400">remaining</p>
+                        </div>
+                    </div>
+
+                    {/* Visual Weight Indicator */}
+                    <div className="w-full bg-slate-700 rounded-full h-2.5 mt-2 overflow-hidden">
+                        <div
+                            className={`h-2.5 rounded-full ${item.weight < 200 ? 'bg-red-500' :
+                                item.weight < 500 ? 'bg-yellow-500' : 'bg-green-500'
+                                }`}
+                            style={{ width: `${Math.min((item.weight / 1000) * 100, 100)}%` }}
+                        ></div>
+                    </div>
+
+                    <div className="mt-3 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+                        <button className="text-xs text-slate-400 hover:text-white mr-3">Edit</button>
+                        <button
+                            onClick={() => onDelete(item.id)}
+                            className="text-xs text-red-400 hover:text-red-300"
+                        >
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+}
