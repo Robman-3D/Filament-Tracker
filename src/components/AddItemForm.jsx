@@ -51,6 +51,9 @@ export default function AddItemForm({ onAdd }) {
                         <option value="TPU">TPU</option>
                         <option value="ASA">ASA</option>
                         <option value="Nylon">Nylon</option>
+                        <option value="Wood">Wood</option>
+                        <option value="Silk">Silk</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
                 <div>

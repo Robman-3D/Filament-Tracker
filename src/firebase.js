@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCiiZT-inx1Euhl7CKgUuiz1CcDY9j6vls",
-    authDomain: "robman-3d.firebaseapp.com",
-    projectId: "robman-3d",
-    storageBucket: "robman-3d.firebasestorage.app",
-    messagingSenderId: "1042718222091",
-    appId: "1:1042718222091:web:0855ca0c62a09b143d640e",
-    measurementId: "G-G5W81DE2CQ"
+    apiKey: "AIzaSyBzBscG7LtPDhwZowI-AhqvgS0LIFUnm4s",
+    authDomain: "robman-3d-cb6a2.firebaseapp.com",
+    projectId: "robman-3d-cb6a2",
+    storageBucket: "robman-3d-cb6a2.firebasestorage.app",
+    messagingSenderId: "653759941380",
+    appId: "1:653759941380:web:d59a2064b60d7a7fbf1e51",
+    measurementId: "G-W585CFQB3W"
 };
 
 // Initialize Firebase
