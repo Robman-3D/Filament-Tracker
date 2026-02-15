@@ -3,6 +3,7 @@ import { collection, onSnapshot, addDoc, deleteDoc, doc, query, orderBy, serverT
 import { db } from './firebase';
 import InventoryList from './components/InventoryList';
 import AddItemForm from './components/AddItemForm';
+import { Heart } from 'lucide-react';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -49,28 +50,35 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-pink-100 text-pink-900 flex flex-col items-center p-4">
-      <header className="w-full max-w-4xl flex justify-between items-center py-6 mb-8">
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+    <div className="relative min-h-screen bg-green-50 text-green-900 flex flex-col items-center p-4 overflow-hidden">
+      {/* Background Hearts Pattern */}
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none flex flex-wrap justify-center content-start gap-12 p-8">
+        {Array.from({ length: 50 }).map((_, i) => (
+          <Heart key={i} size={48} className="text-green-500 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
+        ))}
+      </div>
+
+      <header className="relative z-10 w-full max-w-4xl flex justify-between items-center py-6 mb-8">
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">
           Filament Tracker
         </h1>
-        <div className="text-sm text-pink-500">
+        <div className="text-sm text-green-600 font-medium">
           Shared Inventory
         </div>
       </header>
 
-      <main className="w-full max-w-4xl">
+      <main className="relative z-10 w-full max-w-4xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Inventory List */}
-          <section className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-pink-200 shadow-xl">
-            <h2 className="text-xl font-semibold mb-4 text-pink-700">Your Filaments</h2>
+          <section className="bg-white/80 backdrop-blur-md rounded-xl p-6 border border-green-200 shadow-xl">
+            <h2 className="text-xl font-semibold mb-4 text-green-800">Your Filaments</h2>
             <InventoryList items={items} onDelete={handleDelete} />
-            {loading && <p className="text-center text-pink-500 mt-2">Syncing...</p>}
+            {loading && <p className="text-center text-green-600 mt-2">Syncing...</p>}
           </section>
 
           {/* Add Item Form */}
-          <section className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-pink-200 shadow-xl h-fit">
-            <h2 className="text-xl font-semibold mb-4 text-pink-700">Add New Spool</h2>
+          <section className="bg-white/80 backdrop-blur-md rounded-xl p-6 border border-green-200 shadow-xl h-fit">
+            <h2 className="text-xl font-semibold mb-4 text-green-800">Add New Spool</h2>
             <AddItemForm onAdd={handleAddItem} />
           </section>
         </div>
