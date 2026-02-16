@@ -62,6 +62,28 @@ const JEREZ_DATA = [
 
 export default function ProductSpecs() {
     const [products, setProducts] = useState([]);
+    const loadVelezTable = () => {
+        if (window.confirm("¿Cargar tabla de Vélez-Málaga? Sobrescribirá la actual.")) {
+            setFormData(prev => ({
+                ...prev,
+                colorTable: VELEZ_MALAGA_DATA,
+                tableName: 'Vélez-Málaga',
+                notes: prev.notes + (prev.notes ? '\n\n' : '') + "Cargada tabla Vélez-Málaga."
+            }));
+        }
+    };
+
+    const loadJerezTable = () => {
+        if (window.confirm("¿Cargar tabla de Jerez? Sobrescribirá la actual.")) {
+            setFormData(prev => ({
+                ...prev,
+                colorTable: JEREZ_DATA,
+                tableName: 'Jerez',
+                notes: prev.notes + (prev.notes ? '\n\n' : '') + "Cargada tabla Jerez."
+            }));
+        }
+    };
+
     const [loading, setLoading] = useState(true);
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [editingId, setEditingId] = useState(null);

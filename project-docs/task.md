@@ -17,6 +17,7 @@
     - [x] Colección `project_folders` en Firestore para carpetas vacías
     - [x] Botón explícito "Nuevo Proyecto"
     - [x] Corregir bugs visuales (Header, Espacios vacíos)
+    - [x] Corregir datos de tabla Jerez <!-- id: 4b -->
 - [x] Deployment <!-- id: 16 -->
     - [x] Initialize Git <!-- id: 17 -->
     - [x] Deploy to Vercel <!-- id: 18 -->
