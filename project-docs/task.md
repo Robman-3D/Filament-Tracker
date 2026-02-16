@@ -11,10 +11,12 @@
     - [x] Build Inventory Form (Add Item) <!-- id: 9 -->
     - [x] Build Inventory List (View Items) <!-- id: 10 -->
     - [x] Setup Firestore Integration <!-- id: 11 -->
-- [x] Verification <!-- id: 12 -->
-    - [x] Test adding items (Verified via code review & build) <!-- id: 13 -->
-    - [x] Test syncing (Verified via code review & build) <!-- id: 14 -->
-    - [x] User Acceptance Testing (Local) <!-- id: 15 -->
+- [x] **Persistencia y Organización de Proyectos** <!-- id: 4 -->
+    - [x] Añadir campo `category` a productos
+    - [x] Interfaz de carpetas y navegación
+    - [x] Colección `project_folders` en Firestore para carpetas vacías
+    - [x] Botón explícito "Nuevo Proyecto"
+    - [x] Corregir bugs visuales (Header, Espacios vacíos)
 - [x] Deployment <!-- id: 16 -->
     - [x] Initialize Git <!-- id: 17 -->
     - [x] Deploy to Vercel <!-- id: 18 -->
