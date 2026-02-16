@@ -1,12 +1,16 @@
 import { useState } from 'react';
-import { Heart, LayoutDashboard, Calculator, Users, Menu, Briefcase, Package } from 'lucide-react';
+import { Heart, LayoutDashboard, Calculator, Users, Menu, Briefcase, Package, LogOut } from 'lucide-react';
 import FilamentTracker from './components/FilamentTracker';
 import Accounting from './components/Accounting';
 import Clients from './components/Clients';
 import Projects from './components/Projects';
 import ProductSpecs from './components/ProductSpecs';
+import Login from './components/Login';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem('auth_token') === 'true';
+  });
   const [activeTab, setActiveTab] = useState('filaments');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,6 +22,15 @@ function App() {
       : 'text-slate-500 hover:bg-blue-50 hover:text-blue-600'
     }
   `;
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+    localStorage.setItem('auth_token', 'true');
+  };
+
+  if (!isAuthenticated) {
+    return <Login onLogin={handleLogin} />;
+  }
 
   return (
     <div className="relative min-h-screen bg-[#000597] text-white flex overflow-hidden font-sans">
@@ -56,6 +69,16 @@ function App() {
             <button onClick={() => { setActiveTab('clients'); setIsMobileMenuOpen(false) }} className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${activeTab === 'clients' ? 'bg-pink-600 text-white' : 'text-blue-200'}`}>
               <Users size={20} /> Clientes
             </button>
+            <button
+              onClick={() => {
+                setIsAuthenticated(false);
+                localStorage.removeItem('auth_token');
+                setIsMobileMenuOpen(false);
+              }}
+              className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-red-300 hover:bg-red-500/20 mt-2 border-t border-white/10"
+            >
+              <LogOut size={20} /> Cerrar Sesión
+            </button>
           </div>
         )}
       </div>
@@ -91,6 +114,19 @@ function App() {
             <Users size={22} className={activeTab === 'clients' ? 'text-white' : ''} />
             <span className="font-semibold text-lg">Clientes</span>
           </button>
+
+          <div className="pt-8 mt-4 border-t border-slate-100/50">
+            <button
+              onClick={() => {
+                setIsAuthenticated(false);
+                localStorage.removeItem('auth_token');
+              }}
+              className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group w-full text-red-500 hover:bg-red-50 hover:text-red-600"
+            >
+              <LogOut size={22} />
+              <span className="font-semibold text-lg">Cerrar Sesión</span>
+            </button>
+          </div>
         </nav>
 
         <div className="p-6">
