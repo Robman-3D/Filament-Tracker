@@ -59,6 +59,15 @@ Si él hace un cambio y tú quieres seguir trabajando sobre él (para no machaca
 
 ¡Así siempre trabajáis sobre la última versión! 🔄
 
+### 5. ¿Qué tiene que hacer ÉL ahora?
+Si ya tiene el proyecto descargado en su ordenador, dile esto para que se le actualice con todos los cambios que hemos hecho (carpetas, diseño nuevo, etc.):
+
+1.  Que abra la terminal en la carpeta del proyecto.
+2.  Que escriba:
+    `git pull`
+
+¡Y listo! Su código se actualizará con lo que acabamos de subir a la nube. Si le da algún error, dile que me lo comente.
+
 ## 📱 Uso en Móvil (App)
 ¡Sí, funciona perfectamente en el móvil!
 
